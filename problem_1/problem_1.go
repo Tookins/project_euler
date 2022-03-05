@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-const fstring = "/home/usetheforc3luke/go/src/project_euler/problem_1/data.txt"
+const fstring = "./data.txt"
 
 // return the sum of all the multiples of 3 or 5
 func Execute() int {
