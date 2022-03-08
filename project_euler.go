@@ -1,3 +1,9 @@
+// TODO
+// add in flags for command line arguments to do the following
+// print a problem statement to the console
+// read input from stdin
+// measure performance of a solution
+
 package main
 
 import (
@@ -7,6 +13,7 @@ import (
 
 	"project_euler/problem_1"
 	"project_euler/problem_2"
+	"project_euler/problem_3"
 
 	"github.com/dmars8047/eulertools"
 )
@@ -39,6 +46,9 @@ func main() {
 
 	case 2:
 		fmt.Println(problem_2.Execute())
+
+	case 3:
+		fmt.Println(problem_3.Execute())
 
 	default:
 		fmt.Println("Problem number not found.")
