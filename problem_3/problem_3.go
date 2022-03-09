@@ -20,11 +20,18 @@ func Execute() int64 {
 
 	var greatest_prime_factor int64 = 0
 
-	for i := data - 1; greatest_prime_factor != 0; i-- {
+	for i := int64(2); i <= int64(math.Sqrt(float64(data))); i++ {
 
-		if data%i == 0 && IsPrime(i) {
+		remainder := i
+		dividend := data / i
 
-			greatest_prime_factor = i
+		if data%i == 0 {
+			if dividend > greatest_prime_factor && IsPrime(dividend) {
+				greatest_prime_factor = dividend
+			}
+			if remainder > greatest_prime_factor && IsPrime(remainder) {
+				greatest_prime_factor = remainder
+			}
 
 		}
 
@@ -36,7 +43,7 @@ func Execute() int64 {
 func IsPrime(num int64) bool {
 
 	var i int64
-	for i = 2; i < int64(math.Sqrt(float64(num))); i++ {
+	for i = 2; i <= int64(math.Sqrt(float64(num))); i++ {
 
 		if num%i == 0 {
 
