@@ -14,6 +14,7 @@ import (
 	"project_euler/problem_1"
 	"project_euler/problem_2"
 	"project_euler/problem_3"
+	"project_euler/problem_4"
 
 	"github.com/dmars8047/eulertools"
 )
@@ -49,6 +50,9 @@ func main() {
 
 	case 3:
 		fmt.Println(problem_3.Execute())
+
+	case 4:
+		fmt.Println(problem_4.Execute())
 
 	default:
 		fmt.Println("Problem number not found.")
