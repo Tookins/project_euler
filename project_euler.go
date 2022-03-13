@@ -1,4 +1,7 @@
 // TODO
+
+// problem 5 broken somewhere maybe ISPRIME
+
 // add in flags for command line arguments to do the following
 // print a problem statement to the console
 // read input from stdin
@@ -15,8 +18,10 @@ import (
 	"project_euler/problem_2"
 	"project_euler/problem_3"
 	"project_euler/problem_4"
-
-	"github.com/dmars8047/eulertools"
+	"project_euler/problem_5"
+	"project_euler/problem_6"
+	"project_euler/problem_7"
+	"project_euler/problem_8"
 )
 
 // generalize the process of running the package containing the algorithm
@@ -38,7 +43,7 @@ func main() {
 		return
 	}
 
-	eulertools.PrintPremise(problem, user_agent)
+	//eulertools.PrintPremise(problem, user_agent)
 
 	switch problem {
 
@@ -54,6 +59,17 @@ func main() {
 	case 4:
 		fmt.Println(problem_4.Execute())
 
+	case 5:
+		fmt.Println(problem_5.Execute())
+
+	case 6:
+		fmt.Println(problem_6.Execute())
+
+	case 7:
+		fmt.Println(problem_7.Execute())
+
+	case 8:
+		fmt.Println(problem_8.Execute())
 	default:
 		fmt.Println("Problem number not found.")
 	}
