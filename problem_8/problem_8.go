@@ -10,10 +10,18 @@ func Execute() int64 {
 	var digits [1000]int
 	var max_product int64 = 1
 
+	j := 0
+	for i := range data {
+		if data[i] != byte('\n') && data[i] != byte('\r') {
+			digits[j] = int(data[i]) - 48
+			j++
+		}
+	}
+
 	for i := 0; i < len(digits)-12; i++ {
+
 		var product int64 = 1
 		for j := 0; j < 13; j++ {
-			digits[i+j] = int(data[i+j]) - 48
 			product *= int64(digits[i+j])
 		}
 		if product > max_product {
