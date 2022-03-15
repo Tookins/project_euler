@@ -15,6 +15,7 @@ import (
 	"strconv"
 
 	"project_euler/problem_1"
+	"project_euler/problem_10"
 	"project_euler/problem_2"
 	"project_euler/problem_3"
 	"project_euler/problem_4"
@@ -22,6 +23,7 @@ import (
 	"project_euler/problem_6"
 	"project_euler/problem_7"
 	"project_euler/problem_8"
+	"project_euler/problem_9"
 )
 
 // generalize the process of running the package containing the algorithm
@@ -70,6 +72,13 @@ func main() {
 
 	case 8:
 		fmt.Println(problem_8.Execute())
+
+	case 9:
+		fmt.Println(problem_9.Execute())
+
+	case 10:
+		fmt.Println(problem_10.Execute())
+
 	default:
 		fmt.Println("Problem number not found.")
 	}
