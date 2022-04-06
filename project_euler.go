@@ -25,6 +25,7 @@ import (
 	"project_euler/problem_8"
 	"project_euler/problem_9"
 	"project_euler/problem_11"
+	"project_euler/problem_12"
 )
 
 // generalize the process of running the package containing the algorithm
@@ -82,6 +83,9 @@ func main() {
 
 	case 11:
 		fmt.Println(problem_11.Execute())
+
+	case 12:
+		fmt.Println(problem_12.Execute())
 
 	default:
 		fmt.Println("Problem number not found.")
